@@ -1,46 +1,215 @@
+/* ===== ESTILOS GENERALES ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.navbar {
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
 }
 
-.logo h1 {
-    color: #ff6b9e;
+.logo {
     font-size: 24px;
+    font-weight: bold;
+    color: #d38fb7;
+    text-decoration: none;
 }
 
-.nav-links {
+.logo span {
+    color: #333;
+}
+
+nav ul {
     display: flex;
     list-style: none;
 }
 
-.nav-links li a {
-    margin: 0 15px;
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
-.burger {
-    display: none;
-    cursor: pointer;
+nav ul li a:hover {
+    color: #d38fb7;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
+.btn-cita {
+    background-color: #d38fb7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-cita:hover {
+    background-color: #bf7ba3;
+}
+
+/* ===== BANNER HERO ===== */
+.hero {
+    background: 
+        /* Capa oscura para contraste */
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        /* Imagen de fondo */
+        url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    margin-top: 80px; /* Compensa el header fixed */
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+.hero-subtitle {
+    display: block;
+    font-size: 1.5rem;
+    color: #d38fb7;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease;
+}
+
+.hero-title {
+    font-size: 40px !important;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-description {
+    font-size: 20px !important;
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    animation: fadeInUp 1.2s ease;
+}
+
+.btn-primary {
+    background: #d38fb7;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 2px solid #d38fb7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 2px solid white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background: #bf7ba3;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    .burger {
-        display: block;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    /* Header */
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 50px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
     }
 }
