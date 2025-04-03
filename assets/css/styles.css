@@ -7,8 +7,9 @@
 }
 
 body {
-    color: #333;
-    line-height: 1.6;
+    color: #000000;
+    line-height: 1.8;
+    font-family: sans-serif;
 }
 
 .container {
@@ -20,7 +21,7 @@ body {
 
 /* ===== HEADER ===== */
 header {
-    background-color: #dbd1d1;
+    background-color: #b2b1b3;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -57,7 +58,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #da19e0;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -209,7 +210,7 @@ body {
 }
 
 .banner-content p {
-    color: #666;
+    color: #e9d7d7;
     font-size: 1.2em;
     margin-bottom: 30px;
 }
@@ -232,7 +233,7 @@ body {
 }
 
 .btn {
-    background-color: #d23369;
+    background-color: #f184a8;
     color: white;
     border: none;
     padding: 12px 30px;
@@ -243,10 +244,10 @@ body {
 }
 
 .btn:hover {
-    background-color: #b52a5a;
+    background-color: #ec92f8;
 }
 .btn-primary:hover {
-    background: #bf7ba3;
+    background: hsl(286, 83%, 81%);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -297,4 +298,53 @@ body {
         flex-direction: column;
         gap: 15px;
     }
+}
+{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: white;
+    color: #6e8efb;
+    transform: translateY(-3px);
+}
+
+.footer-text {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
 }
